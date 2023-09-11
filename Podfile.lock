@@ -1,0 +1,16 @@
+PODS:
+  - OKTracer (0.1.25.2)
+
+DEPENDENCIES:
+  - OKTracer
+
+SPEC REPOS:
+  https://github.com/odnoklassniki/tracer-ios.git:
+    - OKTracer
+
+SPEC CHECKSUMS:
+  OKTracer: 87f021ae1d7edbb83a664f4dae03580cae5fffaa
+
+PODFILE CHECKSUM: 38d281c1f433dd443be02a5e372d19a557f904df
+
+COCOAPODS: 1.12.1
