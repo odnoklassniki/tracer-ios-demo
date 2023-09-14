@@ -176,7 +176,7 @@ private extension AppDelegate {
                                                         items: items,
                                                         delegate: self,
                                                         sysInfoProvider: CustomTracerSystemInfoProvider(),
-                                                        logger: CustomTracerLogProvider())
+                                                        logProvider: CustomTracerLogProvider())
         return tracerService
     }
     
@@ -218,8 +218,7 @@ private extension AppDelegate {
                                                         features: features,
                                                         items: items,
                                                         sysInfoProvider: CustomTracerSystemInfoProvider(),
-                                                        logger: CustomTracerLogProvider(),
-                                                        isBeingDebugged: true)
+                                                        logProvider: CustomTracerLogProvider())
         
         return tracerService
     }

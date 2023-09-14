@@ -7,6 +7,6 @@ target 'TracerPod' do
   use_modular_headers!
   use_frameworks! :linkage => :static
 
-  pod 'OKTracer'
+  pod 'OKTracer', '0.1.32'
 
 end

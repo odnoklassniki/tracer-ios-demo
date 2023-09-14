@@ -17,6 +17,7 @@
 		4A9F222627C3E2F500CA628F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F222527C3E2F500CA628F /* Assets.xcassets */; };
 		4A9F222927C3E2F500CA628F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F222727C3E2F500CA628F /* LaunchScreen.storyboard */; };
 		4AF9317D28181724002470FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF9317C28181724002470FC /* UIKit.framework */; };
+		5537F4F41D30BDA6B79CF01D /* Pods_TracerPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B436BAAD1BDBB2714AD49FF /* Pods_TracerPod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,9 @@
 		4A9F222527C3E2F500CA628F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A9F222827C3E2F500CA628F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AF9317C28181724002470FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		51791196175B5F994E35A94A /* Pods-TracerPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracerPod.release.xcconfig"; path = "Target Support Files/Pods-TracerPod/Pods-TracerPod.release.xcconfig"; sourceTree = "<group>"; };
+		5B436BAAD1BDBB2714AD49FF /* Pods_TracerPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TracerPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0644449168802E5C581BF58 /* Pods-TracerPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracerPod.debug.xcconfig"; path = "Target Support Files/Pods-TracerPod/Pods-TracerPod.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AF9317D28181724002470FC /* UIKit.framework in Frameworks */,
+				5537F4F41D30BDA6B79CF01D /* Pods_TracerPod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,7 @@
 				4A91A79E28D09D4300061D3D /* CoreServices.framework */,
 				4AF9317C28181724002470FC /* UIKit.framework */,
 				4A23E9F628117B8E0088460C /* libc++.tbd */,
+				5B436BAAD1BDBB2714AD49FF /* Pods_TracerPod.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,6 +104,8 @@
 		A8FE1A76BC246DAD54AA6533 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				A0644449168802E5C581BF58 /* Pods-TracerPod.debug.xcconfig */,
+				51791196175B5F994E35A94A /* Pods-TracerPod.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -109,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A9F222D27C3E2F500CA628F /* Build configuration list for PBXNativeTarget "TracerPod" */;
 			buildPhases = (
+				10F8160474B5562D8695A181 /* [CP] Check Pods Manifest.lock */,
 				4A9F221527C3E2F300CA628F /* Sources */,
 				4A9F221627C3E2F300CA628F /* Frameworks */,
 				4A9F221727C3E2F300CA628F /* Resources */,
+				4270E93A258F41D2286D3A59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +177,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10F8160474B5562D8695A181 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TracerPod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4270E93A258F41D2286D3A59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TracerPod/Pods-TracerPod-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TracerPod/Pods-TracerPod-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TracerPod/Pods-TracerPod-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A9F221527C3E2F300CA628F /* Sources */ = {
@@ -316,6 +368,7 @@
 		};
 		4A9F222E27C3E2F500CA628F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0644449168802E5C581BF58 /* Pods-TracerPod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -348,6 +401,7 @@
 		};
 		4A9F222F27C3E2F500CA628F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51791196175B5F994E35A94A /* Pods-TracerPod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
